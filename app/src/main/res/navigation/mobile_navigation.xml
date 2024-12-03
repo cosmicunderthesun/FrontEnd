@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_camera"
-        android:name="com.example.caps.ui.camera.CameraFragment"
+        android:name="com.example.caps.ui.camera.ScanFragment"
         android:label="@string/title_bar_camera"
-        tools:layout="@layout/fragment_camera" />
+        tools:layout="@layout/fragment_scan" />
 
     <fragment
         android:id="@+id/navigation_favourite"

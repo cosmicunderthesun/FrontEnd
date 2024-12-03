@@ -10,4 +10,5 @@
     <string name="nama_monumen">Nama Monumen</string>
     <string name="deskripsi">Deskripsi</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum ligula vel libero facilisis, ac euismod felis tempor. Fusce vel ultricies orci. Sed aliquam risus at auctor varius. Proin vulputate, velit et dapibus auctor, ipsum nisl faucibus libero, et elementum nisi libero vitae felis. Aenean sollicitudin interdum nisi, sit amet vulputate eros bibendum id. Vivamus fermentum, enim sed volutpat tincidunt, elit neque gravida arcu, non scelerisque felis leo non metus. Integer varius tortor sed dui vehicula, eu tempor lectus cursus. Integer sed tempor metus. Nulla at tempor purus, eget congue leo tristique sit amet.</string>
+    <string name="desc_scan">Scan monumen dengan mengarahkan kamera ponsel, lalu tekan tombol \'Scan Now\'.</string>
 </resources>

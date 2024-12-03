@@ -1,10 +1,15 @@
 package com.example.caps.ui.notifications
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.caps.databinding.FragmentFavouriteBinding
@@ -17,6 +22,7 @@ class FavouriteFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,11 +33,6 @@ class FavouriteFragment : Fragment() {
 
         _binding = FragmentFavouriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textNotifications
-        favouriteViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 
@@ -39,4 +40,5 @@ class FavouriteFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

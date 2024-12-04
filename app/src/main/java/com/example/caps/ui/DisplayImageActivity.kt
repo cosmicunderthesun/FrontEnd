@@ -19,17 +19,29 @@ class DisplayImageActivity : AppCompatActivity() {
         binding = ActivityDisplayImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "Confirm Image"
+
         showImage()
+
+        binding.cancel.setOnClickListener {
+            finish()
+        }
+
+        binding.analyze.setOnClickListener {
+
+        }
     }
 
     private fun showImage() {
-        val imageUriString = intent.getStringExtra(CameraActivity.IMAGE_GALLERY)
+        val imageUriString = intent.getStringExtra(CameraActivity.EXTRA_GALLERY_IMAGE)
+        val cameraUriString = intent.getStringExtra(CameraActivity.EXTRA_CAMERAX_IMAGE)
 
         if (imageUriString != null) {
             val imageUri = Uri.parse(imageUriString)
-
-            // Set the image URI to the ImageView
             binding.previewImageView.setImageURI(imageUri)
+        } else if (cameraUriString != null) {
+            val cameraUri = Uri.parse(cameraUriString)
+            binding.previewImageView.setImageURI(cameraUri)
         } else {
             Toast.makeText(this, "No image URI found", Toast.LENGTH_SHORT).show()
         }
